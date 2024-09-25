@@ -12,6 +12,8 @@ import { useState } from "react";
 function HomeContainer() {
   const [pagesRead, setPagesRead] = useState<number>(0);
 
+  const pages: number[] = [5, 10, 15, 20, 25, 30];
+
   return (
     <FullPage>
       <Card>
@@ -26,8 +28,8 @@ function HomeContainer() {
         >
           <p className="text-center mb-4">Bugün kaç sayfa okudunuz?</p>
           <div className="flex flex-wrap justify-center mb-4 gap-2">
-            {[5, 10, 15, 20, 25, 30].map((pages) => (
-              <PageCountButton key={pages} pages={pages} />
+            {pages.map((page) => (
+              <PageCountButton key={page} pages={page} />
             ))}
           </div>
           <hr className="border-t border-gray-300 mb-4" />
