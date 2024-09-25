@@ -15,11 +15,11 @@ function BottomNavigationItem(props: BottomNavigationItemProps) {
   return (
     <Link
       href={props.href}
-      className="group inline-flex flex-col items-center justify-center transition duration-200"
+      className="group inline-flex flex-col items-center justify-center"
     >
       <div
         className={clsx(
-          "rounded-xl p-3",
+          "rounded-xl p-3 transition duration-500",
           pathname === props.href
             ? "bg-red-500 text-white dark:bg-red-700"
             : "bg-transparent",
