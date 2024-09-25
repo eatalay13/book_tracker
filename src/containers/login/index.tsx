@@ -10,7 +10,7 @@ function LoginContainer() {
         <BookOpen className="mr-2 inline-block" />
         Giriş Yap
       </h1>
-      <form className="gap-y-4" id="risale-login">
+      <form className="w-full gap-y-4" id="risale-login">
         <div>
           <label
             htmlFor="username"
