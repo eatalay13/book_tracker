@@ -4,22 +4,13 @@ import Button from "@/components/Button";
 import Card from "@/components/Card";
 import FullPage from "@/components/FullPage";
 import Input from "@/components/Input";
+import PageCountButton from "@/components/PageCountButton";
 import { motion } from "framer-motion";
 import { BookOpen } from "lucide-react";
 import { useState } from "react";
 
 function HomeContainer() {
   const [pagesRead, setPagesRead] = useState<number>(0);
-
-  const handlePageEntry = (pages: number) => {
-    setPagesRead(pages);
-  };
-
-  const PageButton = ({ pages }: { pages: number }) => (
-    <Button onClick={() => handlePageEntry(pages)} className="min-w-20">
-      {pages}
-    </Button>
-  );
 
   return (
     <FullPage>
@@ -36,7 +27,7 @@ function HomeContainer() {
           <p className="text-center mb-4">Bugün kaç sayfa okudunuz?</p>
           <div className="flex flex-wrap justify-center mb-4 gap-2">
             {[5, 10, 15, 20, 25, 30].map((pages) => (
-              <PageButton key={pages} pages={pages} />
+              <PageCountButton key={pages} pages={pages} />
             ))}
           </div>
           <hr className="border-t border-gray-300 mb-4" />
@@ -52,7 +43,7 @@ function HomeContainer() {
               onChange={(e) => setPagesRead(Number(e.target.value))}
             />
             <Button
-              onClick={() => handlePageEntry(pagesRead)}
+              onClick={() => setPagesRead(pagesRead)}
               className="block w-full mt-2"
             >
               Kaydet
