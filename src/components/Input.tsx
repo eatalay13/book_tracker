@@ -1,3 +1,5 @@
+"use client";
+
 interface InputProps {
   type: string;
   placeholder: string;
