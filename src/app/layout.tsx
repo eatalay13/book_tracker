@@ -1,3 +1,4 @@
+import BottomNavigation from "@/components/BottomNavigation";
 import "@/styles/globals.css";
 import { geistMono, geistSans } from "@/utils/fonts";
 import type { Metadata } from "next";
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <BottomNavigation />
       </body>
     </html>
   );
