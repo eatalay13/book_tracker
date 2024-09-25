@@ -4,7 +4,7 @@ interface CardProps {
 
 function Card({ children }: CardProps) {
   return (
-    <div className="m-5 rounded-lg bg-white p-8 shadow-xl dark:bg-zinc-700">
+    <div className="bg-cardLight dark:bg-cardDark m-5 rounded-lg p-8 shadow-xl">
       {children}
     </div>
   );

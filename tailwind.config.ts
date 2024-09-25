@@ -13,6 +13,8 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         pageBackground: "var(--page-background)",
+        cardDark: "#121212",
+        cardLight: "#f9f9f9",
       },
     },
   },
