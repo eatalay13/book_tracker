@@ -1,4 +1,5 @@
 import BottomNavigation from "@/components/BottomNavigation";
+import FullPage from "@/components/FullPage";
 import "@/styles/globals.css";
 import { geistMono, geistSans } from "@/utils/fonts";
 import type { Metadata } from "next";
@@ -24,7 +25,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <FullPage>{children}</FullPage>
         <BottomNavigation />
       </body>
     </html>
