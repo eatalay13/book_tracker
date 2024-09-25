@@ -11,8 +11,8 @@ function Card({ children }: CardProps) {
     <motion.div
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}
-      className="bg-white p-8 rounded-lg shadow-xl m-5"
+      transition={{ duration: 0.2 }}
+      className="m-5 rounded-lg bg-white p-8 shadow-xl"
     >
       {children}
     </motion.div>

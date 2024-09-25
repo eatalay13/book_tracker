@@ -17,23 +17,23 @@ function HomeContainer() {
   return (
     <FullPage>
       <Card>
-        <h1 className="text-2xl font-bold text-center mb-6 flex items-center justify-center">
-          <BookOpen className="inline-block mr-2" />
+        <h1 className="mb-6 flex items-center justify-center text-center text-2xl font-bold">
+          <BookOpen className="mr-2 inline-block" />
           Risale Okuma Takibi
         </h1>
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.3 }}
         >
-          <p className="text-center mb-4">Bugün kaç sayfa okudunuz?</p>
-          <div className="flex flex-wrap justify-center mb-4 gap-2">
+          <p className="mb-4 text-center">Bugün kaç sayfa okudunuz?</p>
+          <div className="mb-4 flex flex-wrap justify-center gap-2">
             {pages.map((page) => (
               <PageCountButton key={page} pages={page} />
             ))}
           </div>
-          <hr className="border-t border-gray-300 mb-4" />
-          <p className="text-center mb-2 text-stone-400">
+          <hr className="mb-4 border-t border-gray-300" />
+          <p className="mb-2 text-center text-stone-400">
             Yukarıdakilerden farklı bir sayfa sayısı girmek için aşağıdaki alana
             girin.
           </p>
@@ -41,12 +41,12 @@ function HomeContainer() {
             <Input
               type="number"
               placeholder="Veya sayfa sayısı girin"
-              className="block w-full mt-2"
+              className="mt-2 block w-full"
               onChange={(e) => setPagesRead(Number(e.target.value))}
             />
             <Button
               onClick={() => setPagesRead(pagesRead)}
-              className="block w-full mt-2"
+              className="mt-2 block w-full"
             >
               Kaydet
             </Button>
