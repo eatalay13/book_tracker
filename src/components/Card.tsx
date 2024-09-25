@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { forwardRef } from "react";
 
 interface CardProps {
   children?: React.ReactNode;
@@ -20,4 +19,4 @@ function Card({ children }: CardProps) {
   );
 }
 
-export default forwardRef(Card);
+export default Card;

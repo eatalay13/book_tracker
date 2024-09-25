@@ -1,18 +1,20 @@
 "use client";
 
 interface InputProps {
-  type: string;
-  placeholder: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  name?: string;
+  type?: string;
+  placeholder?: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   className?: string;
 }
 
-const Input = ({ type, placeholder, onChange, className = "" }: InputProps) => (
+const Input = (props: InputProps) => (
   <input
-    type={type}
-    placeholder={placeholder}
-    onChange={onChange}
-    className={`px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${className}`}
+    type={props.type}
+    name={props.name}
+    placeholder={props.placeholder}
+    onChange={props.onChange}
+    className={`px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${props.className}`}
   />
 );
 

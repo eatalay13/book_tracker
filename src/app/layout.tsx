@@ -1,21 +1,14 @@
 import "@/styles/globals.css";
+import { geistMono, geistSans } from "@/utils/fonts";
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import { ReactNode } from "react";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
-
 export const metadata: Metadata = {
-  title: "Risale Okuma Takibi",
+  title: {
+    template: "%s | Risale-i Nur Okuma Takibi",
+    absolute: "Risale-i Nur Okuma Takibi",
+    default: "Risale-i Nur Okuma Takibi",
+  },
   description: "Risale-i Nur okuma takibi uygulaması",
   icons: "./favicon.ico",
 };
