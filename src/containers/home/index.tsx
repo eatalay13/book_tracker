@@ -40,7 +40,10 @@ function HomeContainer() {
             ))}
           </div>
           <hr className="border-t border-gray-300 mb-4" />
-          <p className="text-center mb-4">Ya da sayfa sayısını girin:</p>
+          <p className="text-center mb-2 text-stone-400">
+            Yukarıdakilerden farklı bir sayfa sayısı girmek için aşağıdaki alana
+            girin.
+          </p>
           <div className="flex flex-col items-center">
             <Input
               type="number"
