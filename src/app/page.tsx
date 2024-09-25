@@ -1,39 +1,11 @@
 "use client";
 
+import Button from "@/components/Button";
+import Card from "@/components/Card";
+import Input from "@/components/Input";
 import { motion } from "framer-motion";
 import { BookOpen, ChevronRight, LogIn } from "lucide-react";
 import { useState } from "react";
-
-interface ButtonProps {
-  onClick?: () => void;
-  children?: React.ReactNode;
-  className?: string;
-}
-
-const Button = ({ onClick, children, className = "" }: ButtonProps) => (
-  <button
-    onClick={onClick}
-    className={`px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition-colors ${className}`}
-  >
-    {children}
-  </button>
-);
-
-interface InputProps {
-  type: string;
-  placeholder: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  className?: string;
-}
-
-const Input = ({ type, placeholder, onChange, className = "" }: InputProps) => (
-  <input
-    type={type}
-    placeholder={placeholder}
-    onChange={onChange}
-    className={`px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${className}`}
-  />
-);
 
 export default function Home() {
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(true);
@@ -57,7 +29,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-100 to-purple-100 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-xl m-5">
+      <Card>
         <h1 className="text-2xl font-bold text-center mb-6 flex items-center justify-center">
           <BookOpen className="inline-block mr-2" />
           Risale Okuma Takibi
@@ -116,7 +88,7 @@ export default function Home() {
             </div>
           </motion.div>
         )}
-      </div>
+      </Card>
     </div>
   );
 }
