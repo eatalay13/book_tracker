@@ -2,18 +2,12 @@ import BottomNavigation from "@/components/BottomNavigation";
 import FullPage from "@/components/FullPage";
 import "@/styles/globals.css";
 import { geistMono, geistSans } from "@/utils/fonts";
-import type { Metadata } from "next";
+import { siteMetadata, siteViewport } from "@/utils/metaConfig";
 import { ReactNode } from "react";
 
-export const metadata: Metadata = {
-  title: {
-    template: "%s | Risale-i Nur Okuma Takibi",
-    absolute: "Risale-i Nur Okuma Takibi",
-    default: "Risale-i Nur Okuma Takibi",
-  },
-  description: "Risale-i Nur okuma takibi uygulaması",
-  icons: "./favicon.ico",
-};
+export const metadata = siteMetadata;
+
+export const viewport = siteViewport;
 
 interface RootLayoutProps {
   children: ReactNode;
