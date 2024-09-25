@@ -6,7 +6,7 @@ interface FullPageProps {
 
 function FullPage(props: FullPageProps) {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-blue-100 to-purple-100 flex items-center justify-center">
+    <div className="flex min-h-screen items-center justify-center bg-blue-100 dark:bg-zinc-900">
       {props.children}
     </div>
   );

@@ -19,7 +19,7 @@ function BottomNavigationItem(props: BottomNavigationItemProps) {
     >
       <div
         className={clsx(
-          "rounded-full p-2",
+          "rounded-xl p-3",
           pathname === props.href
             ? "bg-red-500 text-white dark:bg-red-700"
             : "bg-transparent",
