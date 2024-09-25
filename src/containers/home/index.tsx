@@ -30,12 +30,12 @@ function HomeContainer() {
             <PageCountButton key={page} pages={page} />
           ))}
         </div>
-        <hr className="mb-4 border-t border-gray-300" />
+        <hr className="mb-4 border-t border-gray-300 dark:border-gray-700" />
         <p className="mb-2 text-center text-stone-400">
           Yukarıdakilerden farklı bir sayfa sayısı girmek için aşağıdaki alana
           girin.
         </p>
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center gap-y-2">
           <Input
             type="number"
             placeholder="Veya sayfa sayısı girin"
