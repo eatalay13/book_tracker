@@ -19,10 +19,9 @@ function LoginContainer() {
             Kullanıcı Adı
           </label>
           <div className="relative mt-1 rounded-md shadow-sm">
-            {" "}
             <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
               <User className="h-5 w-5 text-gray-400" />
-            </div>{" "}
+            </div>
             <Input
               id="username"
               name="username"
@@ -44,7 +43,7 @@ function LoginContainer() {
           <div className="relative mt-1 rounded-md shadow-sm">
             <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
               <Lock className="h-5 w-5 text-gray-400" />
-            </div>{" "}
+            </div>
             <Input
               id="password"
               name="password"
