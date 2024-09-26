@@ -4,3 +4,8 @@ export interface CreateUserDto {
   firstname?: string | null;
   lastname?: string | null;
 }
+
+export interface SavePageDto {
+  count: number;
+  userId: number;
+}
