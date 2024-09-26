@@ -12,28 +12,32 @@ declare module "next-auth" {
 }
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
-  pages: {
-    signIn: "/login",
-    signOut: "/logout",
-    newUser: "/register",
-  },
   providers: [
     credentials({
       credentials: {
-        username: {},
-        password: {},
+        username: {
+          label: "Kullanıcı Adı",
+          placeholder: "Kullanıcı adınızı girin",
+          type: "text",
+          maxLength: 50,
+        },
+        password: {
+          label: "Şifre",
+          placeholder: "Şifrenizi girin",
+          type: "password",
+          maxLength: 50,
+        },
       },
       authorize: async (credentials) => {
         let user = null;
 
-        // logic to verify if the user exists
         user = await getUserFromDb(
           credentials.username as string,
           credentials.password as string,
         );
 
         if (!user) {
-          throw new Error("User not found.");
+          return null;
         }
 
         return {
