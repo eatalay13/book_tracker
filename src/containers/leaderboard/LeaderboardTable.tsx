@@ -40,10 +40,10 @@ async function LeaderboardTable() {
               Sıra
             </th>
             <th scope="col" className="px-6 py-3">
-              Kullanıcı Adı
+              Kullanıcı
             </th>
             <th scope="col" className="px-6 py-3">
-              Sayfa Sayısı
+              Sayfa
             </th>
           </tr>
         </thead>
