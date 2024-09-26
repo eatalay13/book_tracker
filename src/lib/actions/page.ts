@@ -17,5 +17,5 @@ export async function savePage(count: number) {
     },
   });
 
-  revalidatePath("/report");
+  revalidatePath("/leaderboard");
 }
