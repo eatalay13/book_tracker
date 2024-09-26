@@ -1,5 +1,4 @@
-"use client";
-
+import { savePage } from "@/lib/actions/page";
 import Button from "./Button";
 
 interface PageCountButtonProps {
@@ -8,17 +7,7 @@ interface PageCountButtonProps {
 
 function PageCountButton(props: PageCountButtonProps) {
   const handlePageEntry = async (pages: number) => {
-    const response = await fetch("/api/save-page", {
-      method: "POST",
-      body: JSON.stringify({ count: pages }),
-      headers: { "Content-Type": "application/json" },
-    });
-
-    if (response.ok) {
-      console.log("Page count saved successfully");
-    } else {
-      console.error("Page count save failed");
-    }
+    savePage(pages);
   };
 
   return (
