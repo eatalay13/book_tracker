@@ -29,7 +29,7 @@ const InteractiveReadingCard = () => {
   };
 
   return (
-    <div className="mx-auto mb-5 max-w-sm overflow-hidden rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 shadow-lg">
+    <div className="mx-auto max-w-sm overflow-hidden rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 shadow-lg">
       <div className="space-y-4 p-6">
         <div className="flex items-center justify-between">
           <Book className="text-white" size={32} />

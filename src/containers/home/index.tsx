@@ -11,7 +11,7 @@ interface HomeContainerProps {
 
 function HomeContainer(props: HomeContainerProps) {
   return (
-    <>
+    <div className="space-y-5">
       <InteractiveReadingCard />
       {props.todayData ? (
         <HasTodayData pageCount={props.todayData.count} />
@@ -24,7 +24,8 @@ function HomeContainer(props: HomeContainerProps) {
           <CountSelect />
         </Card>
       )}
-    </>
+      <InteractiveReadingCard />
+    </div>
   );
 }
 
