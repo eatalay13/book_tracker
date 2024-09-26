@@ -74,7 +74,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 
   callbacks: {
     // Kullanıcı session'ına ek verileri dahil etmek için session callback
-    async session({ session, token, user }) {
+    async session({ session, token }) {
       if (session.user) {
         session.user.id = token.id ?? "";
         session.user.username = token.username;
