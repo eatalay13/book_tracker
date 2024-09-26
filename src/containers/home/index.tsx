@@ -1,4 +1,5 @@
 import Card from "@/components/Card";
+import InteractiveReadingCard from "@/components/InteractiveReadingCard";
 import { PageCount } from "@prisma/client";
 import { BookOpen } from "lucide-react";
 import CountSelect from "./CountSelect";
@@ -11,6 +12,7 @@ interface HomeContainerProps {
 function HomeContainer(props: HomeContainerProps) {
   return (
     <>
+      <InteractiveReadingCard />
       {props.todayData ? (
         <HasTodayData pageCount={props.todayData.count} />
       ) : (

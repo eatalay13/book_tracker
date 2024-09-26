@@ -18,7 +18,7 @@ function HasTodayData({ pageCount }: HasTodayDataProps) {
     ];
 
   return (
-    <div className="mx-auto max-w-sm overflow-hidden rounded-xl bg-gradient-to-br from-purple-500 to-red-500 shadow-lg dark:from-purple-800 dark:to-red-800">
+    <div className="mx-auto max-w-sm overflow-hidden rounded-xl bg-gradient-to-br from-green-500 to-orange-500 shadow-lg dark:from-green-800 dark:to-orange-800">
       <div className="space-y-4 p-6">
         <div className="flex items-center justify-center">
           <Book className="mr-2 text-white" size={28} />
