@@ -1,7 +1,6 @@
 import { prisma } from "@/lib/prisma";
+import { CreateUserDto } from "@/lib/types";
 import { User } from "@prisma/client";
-
-import bcrypt from "bcrypt";
 
 export async function getUserFromDb(
   username: string,
@@ -10,18 +9,27 @@ export async function getUserFromDb(
   const user = await prisma.user.findUnique({
     where: {
       username,
+      password,
     },
   });
 
-  if (!user) {
-    return null;
-  }
+  return user;
+}
 
-  const passwordMatch = await bcrypt.compare(password, user.password);
-
-  if (!passwordMatch) {
-    return null;
-  }
+/**
+ * Kullanıcıyı veritabanına kaydeder
+ * @param userDto Kaydedilecek kullanıcı bilgileri
+ * @returns
+ */
+export async function createUserInDb(userDto: CreateUserDto): Promise<User> {
+  const user = await prisma.user.create({
+    data: {
+      username: userDto.username,
+      password: userDto.password,
+      firstname: userDto.firstname,
+      lastname: userDto.lastname,
+    },
+  });
 
   return user;
 }
