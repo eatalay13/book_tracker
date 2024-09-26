@@ -48,7 +48,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         },
       },
       authorize: async (credentials) => {
-        let dbUser = await getUserFromDb(
+        const dbUser = await getUserFromDb(
           credentials.username as string,
           credentials.password as string,
         );
@@ -60,7 +60,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         const user: User = {
           id: dbUser.id.toString(),
           name: dbUser.username,
-          email: "test@gmail.com", // Email'i veritabanınızdan çekin veya dummy olarak bırakın
+          email: "test@gmail.com",
           firstname: dbUser.firstname,
           lastname: dbUser.lastname,
           username: dbUser.username,
