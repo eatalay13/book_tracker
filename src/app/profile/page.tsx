@@ -1,4 +1,5 @@
 import { auth } from "@/auth";
+import Card from "@/components/Card";
 import Link from "next/link";
 
 async function ProfilePage() {
@@ -7,7 +8,7 @@ async function ProfilePage() {
   if (!session?.user) return <div>Giriş Yap...</div>;
 
   return (
-    <div>
+    <Card>
       <h1>Profil Sayfası</h1>
       <p>Merhaba, {session.user.name}</p>
       <p>Ad: {session.user.firstname}</p>
@@ -20,7 +21,7 @@ async function ProfilePage() {
       >
         Çıkış Yap
       </Link>
-    </div>
+    </Card>
   );
 }
 
