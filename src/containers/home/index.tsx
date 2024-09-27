@@ -24,7 +24,6 @@ function HomeContainer(props: HomeContainerProps) {
           <CountSelect />
         </Card>
       )}
-      <InteractiveReadingCard />
     </div>
   );
 }

@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const InteractiveReadingCard = () => {
   const [booksRead, setBooksRead] = useState(1);
-  const [showDetails, setShowDetails] = useState(false);
+  const [showDetails, setShowDetails] = useState(true);
 
   const calculateLevel = (books: number) => Math.floor(books / 5) + 1;
   const calculateProgress = (books: number) => (books % 5) * 20;
