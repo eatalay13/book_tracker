@@ -2,7 +2,7 @@ import PageCountButton from "@/components/PageCountButton";
 import CustomCountInput from "./CustomCountInput";
 
 function CountSelect() {
-  const pages: number[] = [5, 10, 15, 20, 25, 30];
+  const pages: number[] = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
   return (
     <div>
       <p className="mb-4 text-center">Bugün kaç sayfa okudunuz?</p>
