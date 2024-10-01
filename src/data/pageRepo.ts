@@ -29,3 +29,22 @@ export async function hasTodayData(userId: number): Promise<PageCount | null> {
 
   return pageCount;
 }
+
+/**
+ *
+ * @param userId
+ * @returns
+ */
+export async function lastPages(userId: number): Promise<PageCount[]> {
+  const pages = await prisma.pageCount.findMany({
+    where: {
+      userId,
+    },
+    take: 7,
+    orderBy: {
+      createdAt: "desc",
+    },
+  });
+
+  return pages;
+}
